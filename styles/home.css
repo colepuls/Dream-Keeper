@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+.sidebar {
+  position: fixed;
+  background-color: transparent;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100px;
+  z-index: 200;
+}
+
+.sidebar-button-holder {
+  display: flex;
+  border-bottom: solid;
+  border-right: solid;
+  border-bottom-color: darkgray;
+  border-right-color: darkgray;
+  height: 74px;
+  justify-content: center;
+}
+
+.sidebar-button {
+  display: flex;
+  color: darkgray;
+  border: none;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: normal;
+}
+
