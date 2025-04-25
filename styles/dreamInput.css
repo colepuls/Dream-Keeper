@@ -50,3 +50,24 @@ body {
   outline: none;
   animation: cycleColorsShadow 2s linear infinite, cycleColorsText 2s     linear infinite;
 }
+
+#dream {
+  margin-top: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dream-entry {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.1em;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
