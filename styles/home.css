@@ -61,14 +61,6 @@ body {
   100% {background-color: lightsteelblue;}
 }
 
-.banner {
-  position: fixed;
-  width: 100px;
-  height: 335px;
-  bottom: 0;
-  border-radius: 0px;
-}
-
 .image-logo {
   height: 70%;
   width: 100%;
@@ -82,30 +74,28 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 65vh;
-  width: 125vh;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 100px;
 }
 
-.dream-button {
+.logo-button {
   border: none;
+  background-color: transparent;
+  padding: 0;
   cursor: pointer;
-  width: 100px;
-  background-color: rgb(27, 27, 27);
-  transition: opacity 0.2s;
+  transition: 0.2s;
 }
 
-.dream-button:hover {
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.logo-button:hover {
   opacity: 0.8;
 }
 
-.dream-button:active {
+.logo-button:active {
   opacity: 0.6;
 }
-
-.dream-logo-image {
-  height: 300px;
-  width: 200px;
-  background-color: rgb(27, 27, 27);
-}
-
