@@ -44,8 +44,12 @@ body {
 }
 
 .sidebar-button:hover {
-  opacity: 0.8;
   color: black;
+
+}
+
+.sidebar-button:active {
+  opacity: 0.8;
 }
 
 @keyframes cycleColors {
@@ -73,5 +77,35 @@ body {
 .image-logo-history {
   height: 120%;
   width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  width: 125vh;
+}
+
+.dream-button {
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  background-color: rgb(27, 27, 27);
+  transition: opacity 0.2s;
+}
+
+.dream-button:hover {
+  opacity: 0.8;
+}
+
+.dream-button:active {
+  opacity: 0.6;
+}
+
+.dream-logo-image {
+  height: 300px;
+  width: 200px;
+  background-color: rgb(27, 27, 27);
 }
 
