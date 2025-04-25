@@ -25,8 +25,23 @@ function addDreamToPage(text) {
 
   const p = document.createElement('p');
   p.textContent = text;
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = '✖';
+  deleteBtn.className = 'delete-button'
+
+  deleteBtn.addEventListener('click', () => {
+    wrapper.remove();
+    const dreams = JSON.parse(localStorage.getItem('dreams')) || [];
+    const index = dreams.indexOf(text);
+    if (index !== -1) {
+      dreams.splice(index, 1);
+      localStorage.setItem('dreams', JSON.stringify(dreams));
+    }
+  });
   
   wrapper.appendChild(p);
+  wrapper.appendChild(deleteBtn);
   dream.appendChild(wrapper);
 }
 
