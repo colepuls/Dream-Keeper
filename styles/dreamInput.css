@@ -2,3 +2,51 @@ body {
   background-color: rgb(27, 27, 27);
   font-family: arial; 
 }
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+}
+
+.textbox {
+  height: 800px;
+  width: 900px;
+  vertical-align: top;
+  padding-top: 10px;
+  box-sizing: border-box;
+  resize: none;
+  background-color: rgb(27, 27, 27);
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.742);
+  color: lightgray;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-color: lightgray;
+  border-width: 2px;
+}
+
+@keyframes cycleColorsShadow {
+  0% {box-shadow: 0 0 10px lightblue;}
+  20% {box-shadow: 0 0 10px lightcoral;}
+  40% {box-shadow: 0 0 10px lightgreen;}
+  60% {box-shadow: 0 0 10px lightsalmon;}
+  80% {box-shadow: 0 0 10px lightyellow;}
+  100% {box-shadow: 0 0 10px lightsteelblue;}
+}
+
+@keyframes cycleColorsText {
+  0% {color: lightblue;}
+  20% {color: lightcoral;}
+  40% {color: lightgreen;}
+  60% {color: lightsalmon;}
+  80% {color: lightyellow;}
+  100% {color: lightsteelblue;}
+}
+
+.textbox:focus {
+  outline: none;
+  animation: cycleColorsShadow 2s linear infinite, cycleColorsText 2s     linear infinite;
+}
