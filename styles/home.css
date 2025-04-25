@@ -1,5 +1,6 @@
 body {
   background-color: rgb(27, 27, 27);
+  font-family: arial; 
 }
 
 .sidebar {
@@ -20,10 +21,17 @@ body {
   border-right-color: darkgray;
   height: 74px;
   justify-content: center;
+  border-radius: 0px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-button-holder:hover {
+  animation: cycleColors 1.5s infinite;
 }
 
 .sidebar-button {
   display: flex;
+  flex-direction: column;
   color: darkgray;
   border: none;
   background-color: transparent;
@@ -31,5 +39,39 @@ body {
   align-items: center;
   text-align: center;
   white-space: normal;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.sidebar-button:hover {
+  opacity: 0.8;
+  color: black;
+}
+
+@keyframes cycleColors {
+  0% {background-color: lightblue;}
+  20% {background-color: lightcoral;}
+  40% {background-color: lightgreen;}
+  60% {background-color: lightsalmon;}
+  80% {background-color: lightyellow;}
+  100% {background-color: lightsteelblue;}
+}
+
+.banner {
+  position: fixed;
+  width: 100px;
+  height: 335px;
+  bottom: 0;
+  border-radius: 0px;
+}
+
+.image-logo {
+  height: 70%;
+  width: 100%;
+}
+
+.image-logo-history {
+  height: 120%;
+  width: 100%;
 }
 
