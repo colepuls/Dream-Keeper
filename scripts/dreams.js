@@ -50,3 +50,5 @@ function saveDream(text) {
   dreams.push(text);
   localStorage.setItem('dreams', JSON.stringify(dreams));
 }
+
+function nothing(nothing) {}
