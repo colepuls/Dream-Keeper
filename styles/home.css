@@ -39,8 +39,6 @@ body {
 
 .logo-button:hover {
   opacity: 0.8;
-  animation: none;
-  box-shadow: 0 0 10px white;
 }
 
 .logo-button:active {
