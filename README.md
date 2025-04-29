@@ -1,70 +1,93 @@
 # 🌙 Dream Keeper
 
-Dream Keeper is a minimal, visually captivating journaling app that lets you record, view, and manage your dreams. Built with a focus on clean design and usability, this project demonstrates core front-end skills in HTML, CSS, and JavaScript—ideal for showcasing to employers and internship recruiters.
+Dream Keeper is a lightweight, visually striking web app for capturing and organizing your dreams. It focuses on **clarity, speed, and a delightful UI**, demonstrating solid front-end skills (HTML / CSS / Vanilla JS) plus clean code organization—perfect for recruiters or portfolio reviews.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- 📝 **Dream Input Page**  
-  Write down your dreams using a stylized animated text box that supports Shift+Enter for multiline entries and Enter to submit.
-
-- 📜 **Home Page**  
-  Displays all saved dreams in a sleek, bordered layout with light-glow aesthetics.
-
-- 🗑️ **Delete Dreams**  
-  Each dream comes with a custom trash button to remove it from the list and local storage.
-
-- 💾 **Persistent Storage**  
-  Dreams are saved in `localStorage`, allowing for persistence across page reloads.
-
-- 🎨 **Beautiful UI Effects**  
-  Animated color-cycling text, glowing box shadows, and intuitive layout using custom CSS.
+| Feature | What it Does |
+|---------|--------------|
+| **Dream Input** | Animated text area with `Shift + Enter` for new lines and `Enter` to submit. |
+| **Title-Prompt Modal** | After submission, a pop-up asks for a short dream title, preventing empty or duplicate titles. |
+| **Home Timeline** | Lists saved dreams (title only) in a glowing card layout with delete buttons. |
+| **Delete & Undo Safety** | One-click trash icon removes a dream from both the DOM **and** `localStorage`. |
+| **Persistent Storage** | Everything is stored in `localStorage`, so your list survives page reloads. |
+| **Responsive, Animated UI** | Color-cycling shadows, subtle hover states, and keyboard-first design. |
 
 ---
 
 ## 📁 Project Structure
 
+    ├── pages/
+    │   ├── home.html          # Main page (dream list)
+    │   └── dreamInput.html    # Dream entry form + title modal
+    ├── scripts/
+    │   ├── addDreams.js       # Renders dreams on home, handles deletion
+    │   └── saveDreams.js      # Modal logic & localStorage helper
+    ├── styles/
+    │   ├── home.css           # Home-page layout & button styles
+    │   ├── dreamInput.css     # Animated text box & modal styling
+    │   └── dreamDisplay.css   # Card layout for dream entries
+    ├── images/                # Icons & UI assets
+    └── README.md
 
 ---
 
-## 💡 Tech Stack
+## 💡 Tech Highlights
 
-- **HTML5**  
-  Semantically structured pages with navigation between pages.
-
-- **CSS3**  
-  Includes animation, color transitions, flexbox layout, and hover/active states for a polished look.
-
-- **JavaScript (Vanilla)**  
-  Handles DOM manipulation, event listeners, and `localStorage` interaction for saving dreams.
+- **HTML5** – semantic, accessible markup with ARIA-friendly controls  
+- **CSS3** – flexbox, keyframe animations, custom properties, glow effects  
+- **JavaScript (ES6)** – modules, dataset API, dynamic DOM updates, `localStorage`  
 
 ---
 
-## 🚀 How to Run
+## 🚀 Quick Start
 
-1. Clone the repo  
-   `git clone https://github.com/colepuls/dream-keeper.git`
+    # 1. Clone the repo
+    git clone https://github.com/colepuls/dream-keeper.git
+    cd dream-keeper
 
-2. Open `pages/home.html` in your browser to view your saved dreams.
+    # 2. (Optional) start a static server for clean routing
+    npx serve .
+    # or use VS Code “Live Server”
 
-3. Click **"New Dream"** to visit the input page and submit a new one.
+    # 3. Open the app
+    open pages/home.html    # macOS
+    # or simply navigate to pages/home.html in your browser
+
+1. On **Home**, click **“New Dream”**.  
+2. Type your dream, press **Enter**, then supply a title in the modal.  
+3. Your dream title now appears on Home. Delete anytime with the trash icon.
+
+---
+
+## 🛣️ Roadmap
+
+- 🔍 **Search & filter** dreams by keyword  
+- ☁️ **Cloud sync** via Firebase or Supabase  
+- 🧠 **AI summarizer** (Flask API prototype already running locally)  
+- 📱 **PWA wrapper** for offline/mobile usage  
 
 ---
 
 ## 📸 Preview
 
-> _Add screenshots or a short GIF here of the homepage and input page to make the README even more engaging._
+_Add a GIF or screenshots here showcasing the title modal and animated list._
 
 ---
 
 ## 🙋‍♂️ About Me
 
-Hi, I'm **Cole Puls** — a passionate computer science student at Mizzou, aspiring software engineer, and frontend innovator. This project reflects my eye for design and ability to build clean, interactive user experiences using just HTML, CSS, and JavaScript.
+**Cole Puls** – CS sophomore @ Mizzou, aspiring software & AI engineer. I’m passionate about crafting intuitive UIs and solving problems with clean, modern web tech.
 
 ---
 
 ## 📬 Contact
 
-- GitHub: [@colepuls](https://github.com/colepuls)  
-- LinkedIn: [Cole Puls](https://linkedin.com/in/colepuls)
+- **GitHub:** [@colepuls](https://github.com/colepuls)  
+- **LinkedIn:** [Cole Puls](https://linkedin.com/in/colepuls)  
+
+---
+
+> _“Dreams are illustrations… from the book your soul is writing about you.”_ – Marsha Norman
