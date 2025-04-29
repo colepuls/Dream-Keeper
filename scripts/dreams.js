@@ -27,8 +27,8 @@ function addDreamToPage(text) {
   p.textContent = text;
 
   const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = '✖';
   deleteBtn.className = 'delete-button'
+  deleteBtn.innerHTML = `<img src="../images/trash.png" class="trash-icon">`;
 
   deleteBtn.addEventListener('click', () => {
     wrapper.remove();
