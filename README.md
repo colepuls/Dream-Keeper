@@ -62,7 +62,7 @@ The title appears on Home; hover its card for options to view, edit, or delete.
 
 🚫 Duplicate-title guard during save
 
-↩️ Undo-delete snackbar
+↩️ Undo snackbar
 
 ☁️ Cloud sync (Firebase)
 
@@ -75,6 +75,5 @@ Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
 
 📬 Contact
 GitHub: @colepuls
-
 LinkedIn: Cole Puls
 
