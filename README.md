@@ -71,9 +71,7 @@ The title appears on Home; hover its card for options to view, edit, or delete.
 📱 PWA wrapper for offline capture and mobile use.
 
 📸 Preview
-<img width="1438" alt="Screenshot 2025-04-30 at 12 28 32 PM" src="https://github.com/user-attachments/assets/6808b20d-4b27-48d0-b072-465289ae7492" />
-<img width="439" alt="Screenshot 2025-04-30 at 12 29 18 PM" src="https://github.com/user-attachments/assets/39d6e0ac-ff1e-49d8-9012-05d67acdeb50" />
-<img width="1499" alt="Screenshot 2025-04-30 at 12 29 46 PM" src="https://github.com/user-attachments/assets/54044e53-bf03-404c-ad02-da5a77f90b03" />
+
 
 🙋‍♂️ About Me
 Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
