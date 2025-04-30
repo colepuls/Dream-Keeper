@@ -1,7 +1,7 @@
 # 🌙 Dream Keeper
 
 Dream Keeper is a minimalist, dark-themed journal for capturing and organising your dreams.  
-Built with **vanilla JS + HTML 5 + CSS Grid/Flexbox**, it focuses on clean code and a smooth keyboard-first flow—ideal for showcasing front-end fundamentals in a résumé or course portfolio.
+Built with **vanilla JS + HTML 5 + CSS Grid/Flexbox**, it focuses on clean code and a smooth keyboard-first flow—ideal for showcasing front-end fundamentals.
 
 ---
 
