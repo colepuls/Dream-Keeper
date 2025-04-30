@@ -71,7 +71,7 @@ The title appears on Home; hover its card for options to view, edit, or delete.
 📱 PWA wrapper for offline capture and mobile use.
 
 📸 Preview
-<img src="https://github.com/colepuls/Dream-Keeper/blob/main/images/screenshot1.png" width="600"/>
+<img src="https://raw.githubusercontent.com/colepuls/Dream-Keeper/main/images/screenshot1.png" width="600"/>
 <img src="https://raw.githubusercontent.com/colepuls/Dream-Keeper/images/screenshot2.png" width="600"/>
 <img src="https://raw.githubusercontent.com/colepuls/Dream-Keeper/images/screenshot3.png" width="600"/>
 
