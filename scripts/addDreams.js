@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
   savedDreams.forEach(addDreamToPage); // Automatically passes each dream to function.
 });
 
-
 /**
  * Adds a dream to the home page.
  * Creates a card for a dream including:
