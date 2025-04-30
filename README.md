@@ -1,93 +1,83 @@
 # 🌙 Dream Keeper
 
-Dream Keeper is a lightweight, visually striking web app for capturing and organizing your dreams. It focuses on **clarity, speed, and a delightful UI**, demonstrating solid front-end skills (HTML / CSS / Vanilla JS) plus clean code organization—perfect for recruiters or portfolio reviews.
+Dream Keeper is a minimalist, dark-themed journal for capturing and organising your dreams.  
+Built with **vanilla JS + HTML 5 + CSS Grid/Flexbox**, it focuses on clean code and a smooth keyboard-first flow—ideal for showcasing front-end fundamentals in a résumé or course portfolio.
 
 ---
 
-## ✨ Key Features
+## ✨ Current Features
 
-| Feature | What it Does |
-|---------|--------------|
-| **Dream Input** | Animated text area with `Shift + Enter` for new lines and `Enter` to submit. |
-| **Title-Prompt Modal** | After submission, a pop-up asks for a short dream title, preventing empty or duplicate titles. |
-| **Home Timeline** | Lists saved dreams (title only) in a glowing card layout with delete buttons. |
-| **Delete & Undo Safety** | One-click trash icon removes a dream from both the DOM **and** `localStorage`. |
-| **Persistent Storage** | Everything is stored in `localStorage`, so your list survives page reloads. |
-| **Responsive, Animated UI** | Color-cycling shadows, subtle hover states, and keyboard-first design. |
+| Feature | Details |
+|---------|---------|
+| **Dream input box** | Animated `<textarea>` accepts multi-line text with **Shift + Enter**; pressing **Enter** alone triggers the save flow. |
+| **Title-prompt modal** | After writing, a modal forces the user to supply a non-empty title before saving. |
+| **Home gallery** | Saved titles render as cards in a responsive three-column grid. |
+| **View / Edit / Delete menu** | Each card has a three-dot menu for viewing full text, renaming the title, or permanently deleting the entry. |
+| **Local persistence** | Dreams are stored in `localStorage` as objects: `{ id, title, text }`. |
+| **Keyboard & hover animations** | Re-usable key-frame cycles add subtle glow effects across pages. |
+
+> **Note** — duplicate-title checks and an “undo delete” feature are **not** implemented yet; see the roadmap.
 
 ---
 
 ## 📁 Project Structure
 
-    ├── pages/
-    │   ├── home.html          # Main page (dream list)
-    │   └── dreamInput.html    # Dream entry form + title modal
-    ├── scripts/
-    │   ├── addDreams.js       # Renders dreams on home, handles deletion
-    │   └── saveDreams.js      # Modal logic & localStorage helper
-    ├── styles/
-    │   ├── home.css           # Home-page layout & button styles
-    │   ├── dreamInput.css     # Animated text box & modal styling
-    │   └── dreamDisplay.css   # Card layout for dream entries
-    ├── images/                # Icons & UI assets
-    └── README.md
+pages/ ├─ home.html # list of saved dream titles └─ dreamInput.html # writing interface + modal scripts/ ├─ addDreams.js # render, edit, delete, view └─ saveDreams.js # title modal + save helper styles/ ├─ home.css ├─ dreamInput.css └─ dreamDisplay.css images/ # icons (trash, edit, view, home) README.md
+
+yaml
+Copy
+Edit
 
 ---
 
 ## 💡 Tech Highlights
 
-- **HTML5** – semantic, accessible markup with ARIA-friendly controls  
-- **CSS3** – flexbox, keyframe animations, custom properties, glow effects  
-- **JavaScript (ES6)** – modules, dataset API, dynamic DOM updates, `localStorage`  
+- **HTML 5** — semantic markup  
+- **CSS 3** — Grid/Flexbox layout, custom key-frame animations  
+- **ES 2020 JavaScript** — modules, `const`/`let`, arrow functions, `localStorage`  
 
 ---
 
 ## 🚀 Quick Start
 
-    # 1. Clone the repo
-    git clone https://github.com/colepuls/dream-keeper.git
-    cd dream-keeper
+```bash
+# 1 – Clone
+git clone https://github.com/colepuls/dream-keeper.git
+cd dream-keeper
 
-    # 2. (Optional) start a static server for clean routing
-    npx serve .
-    # or use VS Code “Live Server”
+# 2 – Serve (optional but handy for clean routing)
+npx serve .
 
-    # 3. Open the app
-    open pages/home.html    # macOS
-    # or simply navigate to pages/home.html in your browser
+# 3 – Open
+open pages/home.html          # macOS
+# or point your browser at pages/home.html
+Click New Dream.
 
-1. On **Home**, click **“New Dream”**.  
-2. Type your dream, press **Enter**, then supply a title in the modal.  
-3. Your dream title now appears on Home. Delete anytime with the trash icon.
+Type your dream → press Enter → give it a title in the modal.
 
----
+The title appears on Home; hover its card for options to view, edit, or delete.
 
-## 🛣️ Roadmap
+🛣️ Roadmap
+🔍 Search & filter dream titles (Advanced AI search)
 
-- 🔍 **Search & filter** dreams by keyword  
-- ☁️ **Cloud sync** via Firebase or Supabase  
-- 🧠 **AI summarizer** (Flask API prototype already running locally)  
-- 📱 **PWA wrapper** for offline/mobile usage  
+🚫 Duplicate-title guard during save
 
----
+↩️ Undo-delete snackbar
 
-## 📸 Preview
+☁️ Cloud sync (Firebase)
 
-_Add a GIF or screenshots here showcasing the title modal and animated list._
+🧠 AI analyzer that reads a dream and gives it a tag (E.g. Scary, Lost, Confused, Sad, Uplifting)
 
----
+📱 PWA wrapper for offline capture and mobile use.
 
-## 🙋‍♂️ About Me
+📸 Preview
 
-**Cole Puls** – CS sophomore @ Mizzou, aspiring software & AI engineer. I’m passionate about crafting intuitive UIs and solving problems with clean, modern web tech.
 
----
+🙋‍♂️ About Me
+Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
 
-## 📬 Contact
+📬 Contact
+GitHub: @colepuls
 
-- **GitHub:** [@colepuls](https://github.com/colepuls)  
-- **LinkedIn:** [Cole Puls](https://linkedin.com/in/colepuls)  
+LinkedIn: Cole Puls
 
----
-
-> _“Dreams are illustrations… from the book your soul is writing about you.”_ – Marsha Norman
