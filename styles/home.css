@@ -4,8 +4,8 @@ body {
 }
 
 .logo-container {
-  position: fixed;
-  top: 60px;
+  /*position: fixed;*/
+  margin-top: 60px;
   left: 0;
   right: 0;
   display: flex;
