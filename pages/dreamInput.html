@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
   <header>
-    <title>Journal Dream</title>
+    <title>Dream Keeper - Journal</title>
+
+    <!--Page styles on dreamInput.css-->
     <link rel="stylesheet" href="../styles/dreamInput.css">
   </header>
   <body>
+
+    <!--Go to home page button-->
     <a href="/pages/home.html" class="home-button">
       <img class="home-button-logo" src="../images/home copy.png">
     </a>
 
+    <!--Dream input textbox-->
     <div class="input-container">
       <textarea id="dreamInput" class="textbox" placeholder="Enter your dream &#9790;..."></textarea>
     </div>
 
+    <!--Title popup-->
     <div id="titleModal" class="modal">
       <div class="modal-box">
         <h2>Title your dream</h2>
@@ -22,6 +28,7 @@
       </div>
     </div>
 
+    <!--This page saves a dream from saveDreams.js-->
     <script type="module" src="/scripts/saveDreams.js"></script>
   </body>
 </html>

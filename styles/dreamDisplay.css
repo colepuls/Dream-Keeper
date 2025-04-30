@@ -1,11 +1,20 @@
-#dream {
+@keyframes cycleColorsText {
+  0% {color: lightblue;}
+  20% {color: lightcoral;}
+  40% {color: lightgreen;} 
+  60% {color: lightsalmon;}
+  80% {color: lightyellow;}
+  100% {color: lightsteelblue;}
+}
+
+#dream-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin: 150px 80px 0;
 }
 
-.dream-entry {
+.card {
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -27,18 +36,9 @@
   overflow-wrap: break-word;
 }
 
-.dream-entry p {
+.card p {
   flex: 1;
   text-align: center;
-}
-
-@keyframes cycleColorsText {
-  0% {color: lightblue;}
-  20% {color: lightcoral;}
-  40% {color: lightgreen;} 
-  60% {color: lightsalmon;}
-  80% {color: lightyellow;}
-  100% {color: lightsteelblue;}
 }
 
 .menu-button {
@@ -60,7 +60,7 @@
   color: white;
 }
 
-.options-menu {
+.menu {
   position: absolute;
   right: 0px;
   top: -15%;
@@ -75,7 +75,7 @@
   justify-content: center;
 }
 
-.options-menu button {
+.menu button {
   background: transparent;
   border: none;
   color: lightgray;
@@ -86,7 +86,7 @@
   transition: opacity 0.2s;
 }
 
-.options-menu button:hover {
+.menu button:hover {
   opacity: 0.6;
 }
 
