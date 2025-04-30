@@ -70,10 +70,6 @@ The title appears on Home; hover its card for options to view, edit, or delete.
 
 📱 PWA wrapper for offline capture and mobile use.
 
-📸 Preview
-![](https://github.com/colepuls/Dream-Keeper/blob/main/images/screenshot1.png)
-![](https://raw.githubusercontent.com/colepuls/Dream-Keeper/main/images/screenshot1.png)
-
 🙋‍♂️ About Me
 Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
 
