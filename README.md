@@ -71,9 +71,9 @@ The title appears on Home; hover its card for options to view, edit, or delete.
 📱 PWA wrapper for offline capture and mobile use.
 
 📸 Preview
-<img src="https://raw.githubusercontent.com/colepuls/dream-keeper/main/images/screenshot1.png" width="600"/>
-<img src="https://raw.githubusercontent.com/colepuls/dream-keeper/main/images/screenshot2.png" width="600"/>
-<img src="https://raw.githubusercontent.com/colepuls/dream-keeper/main/images/screenshot3.png" width="600"/>
+<img src="https://raw.githubusercontent.com/colepuls/Dream-Keeper/main/images/screenshot1.png" width="600"/>
+<img src="https://raw.githubusercontent.com/colepuls/Dream-Keeper/main/images/screenshot2.png" width="600"/>
+<img src="https://raw.githubusercontent.com/colepuls/Dream-Keeper/main/images/screenshot3.png" width="600"/>
 
 🙋‍♂️ About Me
 Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
