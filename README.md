@@ -1,7 +1,7 @@
 # 🌙 Dream Keeper
 
 Dream Keeper is a minimalist, dark-themed journal for capturing and organising your dreams.  
-Built with **vanilla JS + HTML 5 + CSS Grid/Flexbox**, it focuses on clean code and a smooth keyboard-first flow—ideal for showcasing front-end fundamentals in a résumé or course portfolio.
+Built with **vanilla JS + HTML 5 + CSS Grid/Flexbox**, it focuses on clean code and a smooth keyboard-first flow—ideal for showcasing front-end fundamentals.
 
 ---
 
@@ -62,7 +62,7 @@ The title appears on Home; hover its card for options to view, edit, or delete.
 
 🚫 Duplicate-title guard during save
 
-↩️ Undo-delete snackbar
+↩️ Undo snackbar
 
 ☁️ Cloud sync (Firebase)
 
@@ -70,14 +70,10 @@ The title appears on Home; hover its card for options to view, edit, or delete.
 
 📱 PWA wrapper for offline capture and mobile use.
 
-📸 Preview
-
-
 🙋‍♂️ About Me
 Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
 
 📬 Contact
 GitHub: @colepuls
-
-LinkedIn: Cole Puls
-
+LinkedIn: www.linkedin.com/in/colepuls
+Email: colepuls@me.com

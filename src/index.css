@@ -1,0 +1,15 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full dark background */
+body,
+html {
+  background-color: rgb(27, 27, 27);
+  font-family: Arial, sans-serif;
+  color: lightgray;
+  min-height: 100vh;
+}
