@@ -76,4 +76,9 @@ Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
 📬 Contact
 GitHub: @colepuls
 LinkedIn: www.linkedin.com/in/colepuls
+<<<<<<< HEAD
 Email: colepuls@me.com
+=======
+Email: colepuls@me.com
+
+>>>>>>> d9ffe34adc9bafd12e391b7d601d063a277ef6a9
