@@ -1,7 +1,7 @@
 # 🌙 Dream Keeper
 
-Dream Keeper is a minimalist, dark-themed journal for capturing and organising your dreams.  
-Built with **vanilla JS + HTML 5 + CSS Grid/Flexbox**, it focuses on clean code and a smooth keyboard-first flow—ideal for showcasing front-end fundamentals.
+Dream Keeper is a minimalist, dark-themed journal for capturing and organizing your dreams.  
+Now rebuilt with **React + Vite**, it maintains the clean look and keyboard-first UX while demonstrating modern component-based front-end architecture.
 
 ---
 
@@ -9,20 +9,36 @@ Built with **vanilla JS + HTML 5 + CSS Grid/Flexbox**, it focuses on clean code 
 
 | Feature | Details |
 |---------|---------|
-| **Dream input box** | Animated `<textarea>` accepts multi-line text with **Shift + Enter**; pressing **Enter** alone triggers the save flow. |
-| **Title-prompt modal** | After writing, a modal forces the user to supply a non-empty title before saving. |
-| **Home gallery** | Saved titles render as cards in a responsive three-column grid. |
-| **View / Edit / Delete menu** | Each card has a three-dot menu for viewing full text, renaming the title, or permanently deleting the entry. |
+| **Dream input box** | Animated `<textarea>` accepts multi-line text with **Shift + Enter**; pressing **Enter** alone triggers the save modal. |
+| **Title-prompt modal** | A modal prompts for a non-empty title before saving any dream. |
+| **Dream gallery** | Saved titles display as cards in a responsive, animated grid. |
+| **Three-dot menu** | Each dream card includes options to **View**, **Edit**, or **Delete**. |
 | **Local persistence** | Dreams are stored in `localStorage` as objects: `{ id, title, text }`. |
-| **Keyboard & hover animations** | Re-usable key-frame cycles add subtle glow effects across pages. |
+| **Modular components** | Built with reusable components like `DreamCard` and `Modal`. |
+| **React Router** | Two routes: `/` for Home, `/new` for input. |
+| **Smooth keyboard + hover animations** | Key-frame effects cycle light tones across UI. |
 
-> **Note** — duplicate-title checks and an “undo delete” feature are **not** implemented yet; see the roadmap.
+> **Note** — Duplicate-title checks and an “undo delete” feature are **not yet implemented** (see roadmap below).
 
 ---
 
 ## 📁 Project Structure
 
-pages/ ├─ home.html # list of saved dream titles └─ dreamInput.html # writing interface + modal scripts/ ├─ addDreams.js # render, edit, delete, view └─ saveDreams.js # title modal + save helper styles/ ├─ home.css ├─ dreamInput.css └─ dreamDisplay.css images/ # icons (trash, edit, view, home) README.md
+src/
+├── assets/ # CSS files
+│ ├── dreamInput.css
+│ ├── dreamDisplay.css
+│ └── home.css
+├── components/
+│ ├── DreamCard.jsx # View/Edit/Delete logic
+│ └── Modal.jsx # Title input modal
+├── pages/
+│ ├── Home.jsx # Home page with saved dreams
+│ └── DreamInput.jsx # Input page for writing dreams
+├── App.jsx # React Router
+├── main.jsx # App root
+public/
+└── assets/images/ # Icons (trash, edit, view, home)
 
 yaml
 Copy
@@ -32,9 +48,11 @@ Edit
 
 ## 💡 Tech Highlights
 
-- **HTML 5** — semantic markup  
-- **CSS 3** — Grid/Flexbox layout, custom key-frame animations  
-- **ES 2020 JavaScript** — modules, `const`/`let`, arrow functions, `localStorage`  
+- **React 18** — hooks, components, state
+- **Vite** — blazing-fast bundler + dev server
+- **React Router** — simple page routing (`/`, `/new`)
+- **CSS Grid/Flexbox** — layout + animation
+- **Vanilla localStorage** — persistent data
 
 ---
 
@@ -45,40 +63,37 @@ Edit
 git clone https://github.com/colepuls/dream-keeper.git
 cd dream-keeper
 
-# 2 – Serve (optional but handy for clean routing)
-npx serve .
+# 2 – Install
+npm install
 
-# 3 – Open
-open pages/home.html          # macOS
-# or point your browser at pages/home.html
-Click New Dream.
+# 3 – Run locally
+npm run dev
 
-Type your dream → press Enter → give it a title in the modal.
+# 4 – Open
+http://localhost:5173
 
-The title appears on Home; hover its card for options to view, edit, or delete.
+Click “New Dream”, type your dream, hit Enter, add a title → saved!
+
+Cards appear on the home page; click the ⋮ icon to view, edit, or delete.
 
 🛣️ Roadmap
-🔍 Search & filter dream titles (Advanced AI search)
+🔍 Search & filter dream titles (AI search)
 
 🚫 Duplicate-title guard during save
 
-↩️ Undo snackbar
+↩️ Undo snackbar for deletions
 
-☁️ Cloud sync (Firebase)
+☁️ Cloud sync (e.g. Firebase)
 
-🧠 AI analyzer that reads a dream and gives it a tag (E.g. Scary, Lost, Confused, Sad, Uplifting)
+🧠 AI analyzer (tag dreams: Scary, Sad, Uplifting, etc.)
 
-📱 PWA wrapper for offline capture and mobile use.
+📱 PWA wrapper for offline + mobile use
 
 🙋‍♂️ About Me
-Cole Puls — CS sophomore @ Mizzou aiming for software + ML-engineering roles.
+Cole Puls — CS sophomore @ Mizzou
+Focused on software and machine learning engineering roles.
 
 📬 Contact
 GitHub: @colepuls
-LinkedIn: www.linkedin.com/in/colepuls
-<<<<<<< HEAD
+LinkedIn: linkedin.com/in/colepuls
 Email: colepuls@me.com
-=======
-Email: colepuls@me.com
-
->>>>>>> d9ffe34adc9bafd12e391b7d601d063a277ef6a9
