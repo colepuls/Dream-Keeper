@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import '../assets/dreamInput.css';
+import '../assets/DreamInput.css';
 import Modal from '../components/Modal';
 
 export default function DreamInput() {

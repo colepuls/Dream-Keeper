@@ -1,11 +1,11 @@
-/* Reset defaults */
+/* Selects all html elements. */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Full dark background */
+/* Default styling for all of the pages. */
 body,
 html {
   background-color: rgb(27, 27, 27);

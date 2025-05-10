@@ -9,7 +9,6 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
     setShowMenu((prev) => !prev);
   };
 
-  // Close menu on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
