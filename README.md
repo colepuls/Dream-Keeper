@@ -40,10 +40,6 @@ src/
 public/
 └── assets/images/ # Icons (trash, edit, view, home)
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 💡 Tech Highlights
@@ -68,9 +64,6 @@ npm install
 
 # 3 – Run locally
 npm run dev
-
-# 4 – Open
-http://localhost:5173
 
 Click “New Dream”, type your dream, hit Enter, add a title → saved!
 
