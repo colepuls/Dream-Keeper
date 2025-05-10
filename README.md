@@ -24,21 +24,22 @@ Now rebuilt with **React + Vite**, it maintains the clean look and keyboard-firs
 
 ## 📁 Project Structure
 
+```plaintext
 src/
-├── assets/ # CSS files
-│ ├── dreamInput.css
-│ ├── dreamDisplay.css
-│ └── home.css
+├── assets/              # CSS files
+│   ├── dreamInput.css
+│   ├── dreamDisplay.css
+│   └── home.css
 ├── components/
-│ ├── DreamCard.jsx # View/Edit/Delete logic
-│ └── Modal.jsx # Title input modal
+│   ├── DreamCard.jsx    # View/Edit/Delete logic
+│   └── Modal.jsx        # Title input modal
 ├── pages/
-│ ├── Home.jsx # Home page with saved dreams
-│ └── DreamInput.jsx # Input page for writing dreams
-├── App.jsx # React Router
-├── main.jsx # App root
+│   ├── Home.jsx         # Home page with saved dreams
+│   └── DreamInput.jsx   # Input page for writing dreams
+├── App.jsx              # React Router
+├── main.jsx             # App root
 public/
-└── assets/images/ # Icons (trash, edit, view, home)
+└── assets/images/       # Icons (trash, edit, view, home)
 
 ---
 
