@@ -1,3 +1,5 @@
+import '../assets/Modal.css';
+
 export default function Modal({ titleValue, onTitleChange, onSave, onCancel }) {
   return (
     <div id="titleModal" className="modal" style={{ display: 'flex' }}>

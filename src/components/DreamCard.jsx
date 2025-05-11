@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import '../assets/DreamCard.css';
 
 /**
  * Dream - property for a dream

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import DreamCard from '../components/DreamCard';
 import '../assets/Home.css';
-import '../assets/DreamCard.css';
 
 /**
  * Component for the Home page, where users can create a new dream and view or edit their other dreams.
