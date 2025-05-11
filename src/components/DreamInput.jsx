@@ -2,12 +2,17 @@ import { useState, useRef } from 'react';
 import '../assets/DreamInput.css';
 import Modal from '../components/Modal';
 
+/**
+ * 
+ * @returns html for input page and modal if dream is entered.
+ */
 export default function DreamInput() {
-  const [showModal, setShowModal] = useState(false);
-  const [currentBody, setCurrentBody] = useState('');
-  const [title, setTitle] = useState('');
-  const inputRef = useRef(null);
+  const [showModal, setShowModal] = useState(false); // Initialzes title prompt Modal to not show.
+  const [currentBody, setCurrentBody] = useState(''); // Initializes dream body to empty.
+  const [title, setTitle] = useState(''); // Initializes dream title to empty.
+  const inputRef = useRef(null); // Points to input node, initializes as null.
 
+  // If dream is entered, set dream contents and initialize title to be empty, then make title Modal visible.
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -20,18 +25,19 @@ export default function DreamInput() {
   };
 
   const saveDream = () => {
-    if (!title.trim()) return;
+    if (!title.trim()) return; // Keep prompting user for title.
     const newDream = {
-      id: Date.now(),
+      id: Date.now(), // Unique id.
       title: title.trim(),
       text: currentBody,
     };
-    const existing = JSON.parse(localStorage.getItem('dreams') || '[]');
-    existing.push(newDream);
-    localStorage.setItem('dreams', JSON.stringify(existing));
-    setShowModal(false);
-    setCurrentBody('');
-    inputRef.current.value = '';
+
+    const existing = JSON.parse(localStorage.getItem('dreams') || '[]'); // Load previous dreams from local storage.
+    existing.push(newDream); // Add new dream to list.
+    localStorage.setItem('dreams', JSON.stringify(existing)); // Set new list back to local storage.
+    setShowModal(false); // Hide title modal.
+    setCurrentBody(''); // Empty body for a new dream.
+    inputRef.current.value = ''; // Empty textbox for a new dream.
   };
 
   return (

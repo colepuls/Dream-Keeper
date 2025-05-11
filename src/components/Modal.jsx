@@ -1,5 +1,10 @@
 import '../assets/Modal.css';
 
+/**
+ * 
+ * @param 
+ * @returns html for Title prompt (Modal).
+ */
 export default function Modal({ titleValue, onTitleChange, onSave, onCancel }) {
   return (
     <div id="titleModal" className="modal" style={{ display: 'flex' }}>
