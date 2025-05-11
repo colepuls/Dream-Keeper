@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import '../assets/DreamCard.css';
 
 /**
- * Dream - property for a dream
+ * dream - property for a dream
  * onEdit - property for handleEdit
  * onDelete - property for handleDelete
  * @param { dream, onEdit, onDelete } // Properties.

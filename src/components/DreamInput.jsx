@@ -3,7 +3,8 @@ import '../assets/DreamInput.css';
 import Modal from '../components/Modal';
 
 /**
- * 
+ * Component for the dream input page.
+ * Handles saving dreams and displaying title modal.
  * @returns html for input page and modal if dream is entered.
  */
 export default function DreamInput() {
