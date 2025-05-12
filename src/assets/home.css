@@ -13,7 +13,7 @@ body {
 }
 
 .logo-container {
-  margin-top: 60px;
+  margin-top: 40px;
   left: 0;
   right: 0;
   display: flex;
@@ -50,5 +50,35 @@ body {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  padding-top: 40px;
+  padding-top: 10px;
+}
+
+.dk-logo-container {
+  position: fixed;
+  top: -26px;
+  left: 0;
+  z-index: 1000;
+}
+
+.dk-logo {
+  height: 140px;
+  background-color: lightblue; /* Starting color */
+  animation: colorCycle 5s infinite;
+  mask-image: url('/assets/images/dkLogo.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  -webkit-mask-image: url('/assets/images/dkLogo.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+}
+
+@keyframes colorCycle {
+  0%   { background-color: lightblue; }
+  20%  { background-color: lightcoral; }
+  40%  { background-color: lightgreen; }
+  60%  { background-color: lightsalmon; }
+  80%  { background-color: lightyellow; }
+  100% { background-color: lightsteelblue; }
 }

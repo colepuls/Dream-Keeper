@@ -46,6 +46,14 @@ export default function Home() {
 
   return (
     <div className="page-container">
+
+      <div className="home-header">
+        <div className='dk-logo-container'>
+          <img className="dk-logo" src="/assets/images/dkLogo.svg"/>
+          <div className="dk-logo-overlay"></div>
+        </div>
+      </div>
+
       <div className="logo-container">
         <Link to="/create" className="logo-button">New Dream</Link>
       </div>
