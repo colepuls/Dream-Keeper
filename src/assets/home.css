@@ -1,47 +1,6 @@
-@keyframes cycleColorsShadow {
-  0% {box-shadow: 0 0 10px lightblue;}
-  20% {box-shadow: 0 0 10px lightcoral;}
-  40% {box-shadow: 0 0 10px lightgreen;}
-  60% {box-shadow: 0 0 10px lightsalmon;}
-  80% {box-shadow: 0 0 10px lightyellow;}
-  100% {box-shadow: 0 0 10px lightsteelblue;}
-}
-
 body {
   background-color: rgb(27, 27, 27);
   font-family: arial; 
-}
-
-.logo-container {
-  margin-top: 40px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  padding-top: 0;
-}
-
-.logo-button {
-  border: none;
-  background-color: rgb(120, 79, 208);
-  cursor: pointer;
-  transition: 0.2s;
-  padding: 20px;
-  color: lightgray;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  animation: cycleColorsShadow 2s linear infinite;
-  transition: opacity 0.2s,
-    box-shadow 0.2s;
-}
-
-.logo-button:hover {
-  opacity: 0.8;
-}
-
-.logo-button:active {
-  opacity: 0.6;
 }
 
 .page-container {
@@ -51,34 +10,4 @@ body {
   justify-content: flex-start;
   min-height: 100vh;
   padding-top: 10px;
-}
-
-.dk-logo-container {
-  position: fixed;
-  top: -26px;
-  left: 0;
-  z-index: 1000;
-}
-
-.dk-logo {
-  height: 140px;
-  background-color: lightblue; /* Starting color */
-  animation: colorCycle 5s infinite;
-  mask-image: url('/assets/images/dkLogo.svg');
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  -webkit-mask-image: url('/assets/images/dkLogo.svg');
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-}
-
-@keyframes colorCycle {
-  0%   { background-color: lightblue; }
-  20%  { background-color: lightcoral; }
-  40%  { background-color: lightgreen; }
-  60%  { background-color: lightsalmon; }
-  80%  { background-color: lightyellow; }
-  100% { background-color: lightsteelblue; }
 }

@@ -1,6 +1,9 @@
 import { useState, useRef } from 'react';
 import '../assets/DreamInput.css';
+import '../assets/Navigator.css';
 import Modal from '../components/Modal';
+import Navigator from '../components/Navigator';
+
 
 /**
  * Component for the dream input page.
@@ -43,9 +46,6 @@ export default function DreamInput() {
 
   return (
     <div className="page-container">
-      <a href="/" className="home-button">
-        <img className="home-button-logo" src="/assets/images/home copy.png" />
-      </a>
   
       <div className="input-container">
         <textarea
@@ -65,6 +65,8 @@ export default function DreamInput() {
           onCancel={() => setShowModal(false)}
         />
       )}
+
+      <Navigator/>
     </div>
   );  
 }

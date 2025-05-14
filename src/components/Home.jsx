@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import DreamCard from '../components/DreamCard';
+import Navigator from '../components/Navigator';
 import '../assets/Home.css';
+import '../assets/Navigator.css';
 
 /**
  * Component for the Home page, where users can create a new dream and view or edit their other dreams.
@@ -46,17 +47,6 @@ export default function Home() {
 
   return (
     <div className="page-container">
-
-      <div className="home-header">
-        <div className='dk-logo-container'>
-          <img className="dk-logo" src="/assets/images/dkLogo.svg"/>
-          <div className="dk-logo-overlay"></div>
-        </div>
-      </div>
-
-      <div className="logo-container">
-        <Link to="/create" className="logo-button">New Dream</Link>
-      </div>
   
       <div id="dream-container">
         {dreams.map((dream) => (
@@ -68,6 +58,8 @@ export default function Home() {
           />
         ))}
       </div>
+
+      <Navigator />
     </div>
   );  
 }
