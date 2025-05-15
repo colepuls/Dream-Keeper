@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { EllipsisVertical, Pencil, Trash } from 'lucide-react';
 import '../assets/DreamCard.css';
 
 /**
@@ -34,23 +36,45 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
   }, []);
 
   return (
-    <div className="card" data-id={dream.id}>
+    <Link to={`/view/${dream.id}`} className="card" data-id={dream.id}>
       <p>{dream.title}</p>
-      <button className="menu-button" onClick={toggleMenu}>⋮</button>
+      <button
+        className="menu-button"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();  
+          toggleMenu(e);
+        }}
+      >
+        <EllipsisVertical color="white" />
+      </button>
 
       {showMenu && (
-        <div className="menu" ref={menuRef}>
-          <button onClick={() => alert(dream.text)}>
-            <img className="view-icon" src="/assets/images/view.png" alt="view" />
+        <div className={`menu ${showMenu ? 'show' : ''}`} ref={menuRef}>
+          <button
+            className="edit-icon"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();  
+              toggleMenu(e);
+              onEdit;
+            }}
+          >
+            <Pencil color="white" />
           </button>
-          <button onClick={() => onEdit(dream.id)}>
-            <img className="edit-icon" src="/assets/images/edit.png" alt="edit" />
-          </button>
-          <button onClick={() => onDelete(dream.id)}>
-            <img className="trash-icon" src="/assets/images/trash.png" alt="delete" />
+          <button
+            className="trash-icon"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();  
+              toggleMenu(e);
+              onDelete;
+            }}
+          >
+            <Trash color="white" />
           </button>
         </div>
       )}
-    </div>
+    </Link>
   );
 }

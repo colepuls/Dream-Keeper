@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import DreamInput from './components/DreamInput';
+import DreamView from './components/DreamView';
 
 /**
  * @returns routes to all contents of the application. 
@@ -11,6 +12,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<DreamInput />} />
+        <Route path="/view/:id" element={<DreamView />} />
       </Routes>
     </BrowserRouter>
   );

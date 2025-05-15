@@ -1,10 +1,10 @@
-@keyframes cycleColorsShadow {
-  0% {box-shadow: 0 0 10px lightblue;}
-  20% {box-shadow: 0 0 10px lightcoral;}
-  40% {box-shadow: 0 0 10px lightgreen;}
-  60% {box-shadow: 0 0 10px lightsalmon;}
-  80% {box-shadow: 0 0 10px lightyellow;}
-  100% {box-shadow: 0 0 10px lightsteelblue;}
+@keyframes cycleColors {
+  0% {stroke:lightblue;}
+  20% {stroke:lightcoral;}
+  40% {stroke:lightgreen;}
+  60% {stroke:lightsalmon;}
+  80% {stroke:lightyellow;}
+  100% {stroke:lightsteelblue;}
 }
 
 .navigator-container {
@@ -25,14 +25,18 @@
   border-top: solid;
   border-right: solid;
   border-left: solid;
-  border-color: white;
+  border-color: black;
   border-width: 0.5px;
   height: 70px;
 }
 
+.color-animate {
+  stroke: white;
+  animation: cycleColors 2s linear infinite;
+}
+
 .create-button {
   border: none;
-  background-color: rgb(120, 79, 208);
   cursor: pointer;
   transition: 0.2s;
   padding: 12px 20px;
@@ -40,39 +44,37 @@
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
-  animation: cycleColorsShadow 2s linear infinite;
   animation-play-state: running;
   transition: opacity 0.2s,
     box-shadow 0.2s,
     animation 0.2s;
 }
 
-.create-button:hover {
-  opacity: 0.8;
-  animation-play-state: paused;
-}
-
-.create-button:active {
-  opacity: 0.6;
-}
-
+.search-button,
+.create-button,
 .home-button {
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: transparent;
   transition: background-color 0.2s;
   margin-top: 5px;
   transition: opacity 0.2s;
+  box-shadow: 0 0 6px black;
+  cursor: pointer;
 }
 
+.search-button:hover,
+.create-button:hover,
 .home-button:hover {
   opacity: 0.8;
 }
 
+.search-button:active,
+.create-button:active,
 .home-button:active {
   opacity: 0.6;
 }
