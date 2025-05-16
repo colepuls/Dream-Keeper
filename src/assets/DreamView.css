@@ -1,8 +1,14 @@
 .dream-view {
   margin-top: 20px;
-  text-align: center;
 }
 
 .title-header {
-margin-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dream-content {
+  margin-left: 40px;
+  margin-right: 40px;
+  line-height: 30px;
 }
