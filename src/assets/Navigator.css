@@ -11,7 +11,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgb(79, 79, 79);
+  background-color: white;
   text-align: center;
   z-index: 300;
   padding-bottom: 60px;
@@ -27,7 +27,7 @@
   border-left: solid;
   border-color: black;
   border-width: 0.5px;
-  height: 70px;
+  height: 40px;
 }
 
 .color-animate {
@@ -57,11 +57,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 8px;
   border-radius: 30px;
   background-color: transparent;
   transition: background-color 0.2s;
-  margin-top: 5px;
+  margin-top: 2px;
   transition: opacity 0.2s;
   box-shadow: 0 0 6px black;
   cursor: pointer;

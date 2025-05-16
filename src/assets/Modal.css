@@ -7,15 +7,6 @@
   100% {box-shadow: 0 0 10px lightsteelblue;}
 }
 
-@keyframes cycleColorsText {
-  0% {color: lightblue;}
-  20% {color: lightcoral;}
-  40% {color: lightgreen;} 
-  60% {color: lightsalmon;}
-  80% {color: lightyellow;}
-  100% {color: lightsteelblue;}
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -27,16 +18,17 @@
 }
 
 .modal-box {
-  background: #1e1e1e;
-  border: 2px solid lightgray;
+  background: white;
+  border: 2px solid white;
   border-radius: 10px;
   padding: 24px 32px;
   width: 320px;
   animation: cycleColorsShadow 2s linear infinite;
-  color: lightgray;
+  color: rgb(27, 27, 27);
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-align: center;
 }
 
 
@@ -44,9 +36,9 @@
   padding: 6px 8px;
   font-size: 1em;
   border-radius: 4px;
-  border: 1px solid lightgray;
-  background: #2b2b2b;
-  animation: cycleColorsText 2s linear infinite;
+  border: 0.5px solid rgb(27, 27, 27);
+  background: white;
+  color: rgb(27, 27, 27);
 }
 
 .modal-box button {
@@ -62,12 +54,13 @@
 }
 
 #titleSave { 
-  background: rgb(120,79,208); 
+  color: rgb(27, 27, 27); 
   transition: opacity 0.2s;
 }
 
 #titleCancel { 
-  background: rgb(218, 114, 114);
+  background: lightgray;
+  color: rgb(27, 27, 27);
   transition: opacity 0.2s;
 }
 

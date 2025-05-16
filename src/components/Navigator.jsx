@@ -5,14 +5,14 @@ export default function Navigator() {
   return (
     <div className="navigator-container">
         <Link to="/" className="home-button">
-          <House color="white" size={28} />
+          <House color="black" size={18} />
         </Link>
 
         <Link to="/create" className="create-button">
-          <BadgePlus className="color-animate" color="white" size={28} />
+          <BadgePlus className="color-animate" color="black" size={18} />
         </Link>
 
-        <Search className="search-button" color="white" size={50} />
+        <Search className="search-button" color="black" size={33} />
     </div>
   );
 }

@@ -46,7 +46,7 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
           toggleMenu(e);
         }}
       >
-        <EllipsisVertical color="white" />
+        <EllipsisVertical color="rgb(78, 78, 78)" />
       </button>
 
       {showMenu && (
@@ -57,10 +57,10 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
               e.preventDefault();
               e.stopPropagation();  
               toggleMenu(e);
-              onEdit;
+              onEdit(dream.id);
             }}
           >
-            <Pencil color="white" />
+            <Pencil color="white" size={18}/>
           </button>
           <button
             className="trash-icon"
@@ -68,10 +68,10 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
               e.preventDefault();
               e.stopPropagation();  
               toggleMenu(e);
-              onDelete;
+              onDelete(dream.id);
             }}
           >
-            <Trash color="white" />
+            <Trash color="white" size={18}/>
           </button>
         </div>
       )}
