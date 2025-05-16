@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Navigator from '../components/Navigator';
-import '../assets/DreamInput.css';
+import '../assets/DreamView.css';
 
 export default function DreamView() {
   const { id } = useParams(); // Get the dream ID from the URL.
@@ -18,8 +18,8 @@ export default function DreamView() {
   return (
     <>
       <div className="dream-view">
-        <h2>{dream.title}</h2>
-        <p>{dream.text}</p>
+        <h2 className="title-header">{dream.title}</h2>
+        <p className="dream-content">{dream.text}</p>
       </div>
 
       <Navigator />
