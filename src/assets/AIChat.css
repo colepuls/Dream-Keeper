@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.bubble {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  max-width: 80%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.user-bubble {
+  background-color: #cfe9ff;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.ai-bubble {
+  background-color: #eaeaea;
+  align-self: flex-start;
+  margin-right: auto;
+}

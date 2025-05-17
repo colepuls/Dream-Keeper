@@ -50,6 +50,7 @@
     animation 0.2s;
 }
 
+.help-button,
 .search-button,
 .create-button,
 .home-button {
@@ -67,12 +68,14 @@
   cursor: pointer;
 }
 
+.help-button:hover,
 .search-button:hover,
 .create-button:hover,
 .home-button:hover {
   opacity: 0.8;
 }
 
+.help-button:active,
 .search-button:active,
 .create-button:active,
 .home-button:active {

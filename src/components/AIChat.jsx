@@ -1,0 +1,71 @@
+import { useState } from 'react';
+import { queryOllama } from '../apis/OllamaApi';
+import Navigator from './Navigator';
+import '../assets/AIChat.css';
+
+export default function AIChat() {
+  const [prompt, setPrompt] = useState('');
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleAsk = async () => {
+    if (!prompt.trim()) return;
+
+    const userMessage = { sender: 'user', text: prompt };
+    setMessages((prev) => [...prev, userMessage]);
+    setLoading(true);
+    setPrompt('');
+
+    try {
+      const res = await queryOllama(prompt);
+      const aiMessage = { sender: 'ai', text: res };
+      setMessages((prev) => [...prev, aiMessage]);
+    } catch (err) {
+      console.error('Error contacting AI:', err);
+      const errMessage = { sender: 'ai', text: 'Error contacting AI.' };
+      setMessages((prev) => [...prev, errMessage]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+      handleAsk();
+    }
+  };
+
+  return (
+    <div className="container">
+      <h2 className="header">Ask for help</h2>
+
+      <div className="chat-box">
+        {messages.map((msg, index) => (
+          <div
+            key={index}
+            className={`bubble ${msg.sender === 'user' ? 'user-bubble' : 'ai-bubble'}`}
+          >
+            {msg.text}
+          </div>
+        ))}
+        {loading && <div className="bubble ai-bubble"><em>Thinking...</em></div>}
+      </div>
+
+      <textarea className="input-text"
+        placeholder="How can I help you?"
+        value={prompt}
+        onChange={(e) => setPrompt(e.target.value)}
+        onKeyDown={handleKeyDown}
+        rows={3}
+        cols={50}
+        style={{ resize: 'none', marginTop: '10px', marginBottom: '10px' }}
+      />
+
+      <button onClick={handleAsk} disabled={loading || !prompt.trim()}>
+        {loading ? 'Thinking...' : 'Send'}
+      </button>
+
+      <Navigator />
+    </div>
+  );
+}
