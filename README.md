@@ -1,26 +1,32 @@
-🌙 Dream Keeper
+# 🌙 Dream Keeper
+
 Dream Keeper is a minimalist, dark-themed journal for capturing and organizing your dreams.
-Rebuilt with React + Vite, it maintains a clean look and keyboard-first UX while demonstrating modern component-based front-end architecture.
+Rebuilt with **React + Vite**, it maintains a clean look and keyboard-first UX while demonstrating modern component-based front-end architecture.
 
-✨ Current Features
-Feature	Details
-Dream input box	Animated <textarea> accepts multi-line text with Shift + Enter; pressing Enter alone triggers the save modal.
-Title-prompt modal	A modal prompts for a non-empty title before saving any dream.
-Dream gallery	Saved titles display as cards in a responsive, animated grid.
-View page	Click a card to open a /view/:id page showing the full dream.
-Three-dot menu	Each dream card includes options to View, Edit, or Delete.
-Local persistence	Dreams are stored in localStorage as objects: { id, title, text }.
-Ask AI page	/AskAI page allows users to chat with AI about their dreams (powered by Ollama).
-Modular components	Built with reusable components like DreamCard, Modal, and Navigator.
-React Router	Supports multiple routes: /, /new, /view/:id, /AskAI.
-Smooth keyboard + hover animations	Keyframe effects animate light tones across UI.
+---
 
-Note — Duplicate-title checks and an “undo delete” feature are not yet implemented (see roadmap below).
+## ✨ Current Features
 
-📁 Project Structure
-plaintext
-Copy
-Edit
+| Feature                                | Details                                                                                                                 |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Dream input box**                    | Animated `<textarea>` accepts multi-line text with **Shift + Enter**; pressing **Enter** alone triggers the save modal. |
+| **Title-prompt modal**                 | A modal prompts for a non-empty title before saving any dream.                                                          |
+| **Dream gallery**                      | Saved titles display as cards in a responsive, animated grid.                                                           |
+| **View page**                          | Click a card to open a `/view/:id` page showing the full dream.                                                         |
+| **Three-dot menu**                     | Each dream card includes options to **View**, **Edit**, or **Delete**.                                                  |
+| **Local persistence**                  | Dreams are stored in `localStorage` as objects: `{ id, title, text }`.                                                  |
+| **Ask AI page**                        | `/AskAI` page allows users to chat with AI about their dreams (powered by Ollama).                                      |
+| **Modular components**                 | Built with reusable components like `DreamCard`, `Modal`, and `Navigator`.                                              |
+| **React Router**                       | Supports multiple routes: `/`, `/new`, `/view/:id`, `/AskAI`.                                                           |
+| **Smooth keyboard + hover animations** | Keyframe effects animate light tones across UI.                                                                         |
+
+> **Note** — Duplicate-title checks and an “undo delete” feature are **not yet implemented** (see roadmap below).
+
+---
+
+## 📁 Project Structure
+
+```plaintext
 src/
 ├── assets/              # CSS files
 │   ├── dreamInput.css
@@ -41,23 +47,24 @@ src/
 ├── main.jsx             # React root
 public/
 └── assets/images/       # Icons and branding
-💡 Tech Highlights
-React 18 — hooks, state, props, modular UI
+```
 
-Vite — ultra-fast dev environment
+---
 
-React Router v6+ — clean route management
+## 💡 Tech Highlights
 
-CSS Grid/Flexbox — responsive layout and smooth transitions
+* **React 18** — hooks, state, props, modular UI
+* **Vite** — ultra-fast dev environment
+* **React Router v6+** — clean route management
+* **CSS Grid/Flexbox** — responsive layout and smooth transitions
+* **localStorage** — fast, offline-first dream persistence
+* **Ollama API** — AI chat assistant for dream interpretation or creative feedback
 
-localStorage — fast, offline-first dream persistence
+---
 
-Ollama API — AI chat assistant for dream interpretation or creative feedback
+## 🚀 Quick Start
 
-🚀 Quick Start
-bash
-Copy
-Edit
+```bash
 # 1 – Clone the repo
 git clone https://github.com/colepuls/dream-keeper.git
 cd dream-keeper
@@ -67,30 +74,34 @@ npm install
 
 # 3 – Run the app locally
 npm run dev
+```
+
 Click “New Dream”, type your dream, hit Enter, then add a title → saved!
 
 Use the navigation bar to access saved dreams, create a new one, or talk to the AI.
 
-🛣️ Roadmap
-🔍 Search & filter dream titles (AI search planned)
+---
 
-🚫 Duplicate-title guard during save
+## 🚣️ Roadmap
 
-↩️ Undo delete snackbar
+* 🔍 **Search & filter** dream titles (AI search planned)
+* ❌ **Duplicate-title guard** during save
+* ↩️ **Undo delete** snackbar
+* ☁️ **Cloud sync** with Firebase or Supabase
+* 🧠 **AI analyzer** (auto-tag dreams: Scary, Sad, Uplifting, etc.)
+* 📱 **PWA wrapper** for offline mobile use
 
-☁️ Cloud sync with Firebase or Supabase
+---
 
-🧠 AI analyzer (auto-tag dreams: Scary, Sad, Uplifting, etc.)
+## 👤 About Me
 
-📱 PWA wrapper for offline mobile use
-
-🙋‍♂️ About Me
-Cole Puls — CS sophomore @ Mizzou
+**Cole Puls** — CS sophomore @ Mizzou
 Focused on software and machine learning engineering.
 
-📬 Contact
-GitHub: @colepuls
+---
 
-LinkedIn: linkedin.com/in/colepuls
+## 📬 Contact
 
-Email: colepuls@me.com
+* GitHub: [@colepuls](https://github.com/colepuls)
+* LinkedIn: [linkedin.com/in/colepuls](https://linkedin.com/in/colepuls)
+* Email: [colepuls@me.com](mailto:colepuls@me.com)
