@@ -89,7 +89,6 @@ Use the navigation bar to access saved dreams, create a new one, or talk to the 
 * ❌ **Duplicate-title guard** during save
 * ↩️ **Undo delete** snackbar
 * ☁️ **Cloud sync** with Firebase or Supabase
-* 🧠 **AI analyzer** (auto-tag dreams: Scary, Sad, Uplifting, etc.)
 * 📱 **PWA wrapper** for offline mobile use
 
 ---
