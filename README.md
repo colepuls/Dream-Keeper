@@ -87,6 +87,8 @@ Click “New Dream”, type your dream, hit Enter, then add a title → saved!
 
 Use the navigation bar to access saved dreams, create a new one, or talk to the AI.
 
+https://github.com/user-attachments/assets/bb79bd4f-7bd6-48f1-825d-16514a103b9f
+
 ---
 
 ## 🚣️ Roadmap
