@@ -11,7 +11,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 8px;
@@ -114,4 +115,17 @@
   height: 19px;
   margin-top: 2px;
   margin-bottom: 3px;
+}
+
+.mood-tag {
+  margin-top: 10px;
+  font-size: 12px;
+  color: black;
+  background-color: rgb(201, 147, 255);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.dream-title {
+  margin-top: 8px;
 }

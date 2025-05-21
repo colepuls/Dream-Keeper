@@ -37,7 +37,10 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
 
   return (
     <Link to={`/view/${dream.id}`} className="card" data-id={dream.id}>
-      <p>{dream.title}</p>
+
+      <p className="dream-title">{dream.title}</p>
+      {dream.mood && <span className="mood-tag">{dream.mood}</span>}
+
       <button
         className="menu-button"
         onClick={(e) => {

@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import '../assets/DreamInput.css';
 import '../assets/Navigator.css';
 import Modal from '../components/Modal';
+import { queryOllama } from '../apis/OllamaApi';
 import Navigator from '../components/Navigator';
 
 
@@ -28,12 +29,24 @@ export default function DreamInput() {
     }
   };
 
-  const saveDream = () => {
+  const saveDream = async () => {
     if (!title.trim()) return; // Keep prompting user for title.
+
+    // Ask AI for mood tag
+    let mood = 'unknown';
+    try {
+      const aiPrompt = `What is the mood of the following dream? Respond with ONLY A ONE word tag like scary, sad, happy, confusing, peaceful, eye-opening. Again you should respond with only the tag, nothing else. ${currentBody}`;
+      const response = await queryOllama(aiPrompt);
+      mood = response.trim().toLowerCase();
+    } catch (err) {
+      console.error('Failed to get mood from AI: ', err);
+    }
+
     const newDream = {
       id: Date.now(), // Unique id.
       title: title.trim(),
       text: currentBody,
+      mood,
     };
 
     const existing = JSON.parse(localStorage.getItem('dreams') || '[]'); // Load previous dreams from local storage.
