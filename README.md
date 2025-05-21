@@ -73,7 +73,13 @@ cd dream-keeper
 # 2 – Install dependencies
 npm install
 
-# 3 – Run the app locally
+# 3 - Install Ollama API
+https://ollama.com/download
+
+# 4 - Run Ollama locally
+ollama run mistral
+
+# 5 – Run the app locally
 npm run dev
 ```
 
