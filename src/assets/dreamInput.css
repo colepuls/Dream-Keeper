@@ -22,8 +22,10 @@ body {
 }
 
 .textbox {
-  height: 800px;
-  width: 900px;
+  width: 90vw;
+  max-width: 900px;
+  height: 85vh;
+  max-height: 700px;
   vertical-align: top;
   padding-top: 10px;
   box-sizing: border-box;
