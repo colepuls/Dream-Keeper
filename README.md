@@ -48,23 +48,24 @@ src/
 ├── main.jsx             # React root
 public/
 └── assets/images/       # Icons and branding
-💡 Tech Highlights
-React 18 — hooks, state, props, modular UI
+```
 
-Vite — ultra-fast dev environment
+---
 
-React Router v6+ — clean route management
+## 💡 Tech Highlights
 
-CSS Grid/Flexbox — responsive layout and smooth transitions
+* **React 18** — hooks, state, props, modular UI
+* **Vite** — ultra-fast dev environment
+* **React Router v6+** — clean route management
+* **CSS Grid/Flexbox** — responsive layout and smooth transitions
+* **localStorage** — fast, offline-first dream persistence
+* **Ollama API** — AI chat assistant for dream interpretation or creative feedback
 
-localStorage — fast, offline-first dream persistence
+---
 
-Ollama API — AI chat assistant for dream interpretation or creative feedback
+## 🚀 Quick Start
 
-🚀 Quick Start
-bash
-Copy
-Edit
+```bash
 # 1 – Clone the repo
 git clone https://github.com/colepuls/dream-keeper.git
 cd dream-keeper
@@ -74,30 +75,34 @@ npm install
 
 # 3 – Run the app locally
 npm run dev
+```
+
 Click “New Dream”, type your dream, hit Enter, then add a title → saved!
 
 Use the navigation bar to access saved dreams, create a new one, or talk to the AI.
 
-🚣️ Roadmap
-🔍 Search & filter dream titles (AI search planned)
+---
 
-❌ Duplicate-title guard during save
+## 🚣️ Roadmap
 
-↩️ Undo delete snackbar
+* 🔍 **Search & filter** dream titles (AI search planned)
+* ❌ **Duplicate-title guard** during save
+* ↩️ **Undo delete** snackbar
+* ☁️ **Cloud sync** with Firebase or Supabase
+* 🧠 **AI analyzer** (auto-tag dreams: Scary, Sad, Uplifting, etc.)
+* 📱 **PWA wrapper** for offline mobile use
 
-☁️ Cloud sync with Firebase or Supabase
+---
 
-🧠 AI analyzer (auto-tag dreams: Scary, Sad, Uplifting, etc.)
+## 👤 About Me
 
-📱 PWA wrapper for offline mobile use
-
-👤 About Me
-Cole Puls — CS sophomore @ Mizzou
+**Cole Puls** — CS sophomore @ Mizzou  
 Focused on software and machine learning engineering.
 
-📬 Contact
-GitHub: @colepuls
+---
 
-LinkedIn: linkedin.com/in/colepuls
+## 📬 Contact
 
-Email: colepuls@me.com
+* GitHub: [@colepuls](https://github.com/colepuls)
+* LinkedIn: [linkedin.com/in/colepuls](https://linkedin.com/in/colepuls)
+* Email: [colepuls@me.com](mailto:colepuls@me.com)
