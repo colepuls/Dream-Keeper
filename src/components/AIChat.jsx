@@ -4,6 +4,24 @@ import Navigator from './Navigator';
 import '../assets/AIChat.css';
 
 export default function AIChat() {
+  const loadDreams = () => {
+    return JSON.parse(localStorage.getItem('dreams') || '[]');
+  };
+
+  const systemInstructions = `
+  You are an assistant that helps users manage their dreams in a journaling app.
+
+  You can answer questions like:
+  - How many dreams do I have?
+  - How many are tagged as "happy"?
+  - How do I delete or edit a dream?
+
+  To delete a dream, tap the three-dot menu on a dream card, then press the trash icon.
+  To edit a dream's title, tap the same menu and press the pencil icon.
+
+  Always respond with clear and friendly advice.
+  `;
+
   const [prompt, setPrompt] = useState('');
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -23,7 +41,15 @@ export default function AIChat() {
     setPrompt('');
 
     try {
-      const res = await queryOllama(prompt);
+      const context = `
+      ${systemInstructions}
+      Here are the saved dreams:
+      ${loadDreams().map(d => `• "${d.title}" - Mood: ${d.mood}`).join('\n')}
+      
+      User question: ${prompt}
+      `;
+
+      const res = await queryOllama(context);
       const aiMessage = { sender: 'ai', text: res };
       setMessages((prev) => [...prev, aiMessage]);
     } catch (err) {
@@ -36,7 +62,7 @@ export default function AIChat() {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+    if (e.key === 'Enter') {
       handleAsk();
     }
   };
