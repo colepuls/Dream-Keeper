@@ -64,6 +64,13 @@ html, body {
   padding-top: 4px;
   color: black;
   background-color: white;
+  user-select: none;
+  outline: none;
+  line-height: 36px;
+}
+
+.input-text:focus {
+  outline: none;
 }
 
 .send-button {
