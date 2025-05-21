@@ -16,8 +16,8 @@ export default function AIChat() {
   - How many are tagged as "happy"?
   - How do I delete or edit a dream?
 
-  To delete a dream, tap the three-dot menu on a dream card, then press the trash icon.
-  To edit a dream's title, tap the same menu and press the pencil icon.
+  To delete a dream, tap the three-dot menu on a dream card, then press the trash icon. Once the trash icon is pressed, the dream is deleted, there is no undo. There is no confirm to delete action prompt.
+  To edit a dream's title, tap the same menu and press the pencil icon, then you will be prompted to edit the dream's title.
 
   Always respond with clear and friendly advice.
   `;
@@ -62,7 +62,8 @@ export default function AIChat() {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
       handleAsk();
     }
   };
