@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { queryOllama } from '../apis/OllamaApi';
 import Navigator from './Navigator';
 import '../assets/AIChat.css';
@@ -7,6 +7,12 @@ export default function AIChat() {
   const [prompt, setPrompt] = useState('');
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, loading])
 
   const handleAsk = async () => {
     if (!prompt.trim()) return;
@@ -36,36 +42,43 @@ export default function AIChat() {
   };
 
   return (
-    <div className="container">
-      <h2 className="header">Ask for help</h2>
-
-      <div className="chat-box">
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`bubble ${msg.sender === 'user' ? 'user-bubble' : 'ai-bubble'}`}
+    <>
+      <div className="container">
+        <h2 className="header">Ask for help</h2>
+    
+        <div className="chat-box">
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`bubble ${msg.sender === 'user' ? 'user-bubble' : 'ai-bubble'}`}
+            >
+              {msg.text}
+            </div>
+          ))}
+          {loading && <div className="bubble ai-bubble"><em>Thinking...</em></div>}
+          <div ref={bottomRef} />
+        </div>
+    
+        <div className="send-message-container">
+          <textarea
+            className="input-text"
+            placeholder="How can I help you?"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            onKeyDown={handleKeyDown}
+            rows={3}
+            cols={50}
+          />
+          <button
+            className="send-button"
+            onClick={handleAsk}
+            disabled={loading || !prompt.trim()}
           >
-            {msg.text}
-          </div>
-        ))}
-        {loading && <div className="bubble ai-bubble"><em>Thinking...</em></div>}
+            Send
+          </button>
+        </div>
       </div>
-
-      <textarea className="input-text"
-        placeholder="How can I help you?"
-        value={prompt}
-        onChange={(e) => setPrompt(e.target.value)}
-        onKeyDown={handleKeyDown}
-        rows={3}
-        cols={50}
-        style={{ resize: 'none', marginTop: '10px', marginBottom: '10px' }}
-      />
-
-      <button onClick={handleAsk} disabled={loading || !prompt.trim()}>
-        {loading ? 'Thinking...' : 'Send'}
-      </button>
-
       <Navigator />
-    </div>
-  );
+    </>
+  );  
 }
