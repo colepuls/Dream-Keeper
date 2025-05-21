@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EllipsisVertical, Pencil, Trash } from 'lucide-react';
+import { EllipsisVertical, Pencil, Trash, Tag } from 'lucide-react';
 import '../assets/DreamCard.css';
 
 /**
@@ -39,7 +39,10 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
     <Link to={`/view/${dream.id}`} className="card" data-id={dream.id}>
 
       <p className="dream-title">{dream.title}</p>
-      {dream.mood && <span className="mood-tag">{dream.mood}</span>}
+      {dream.mood && <span className="mood-tag">
+          <Tag className="tag" size={12}/>
+          {dream.mood}
+        </span>}
 
       <button
         className="menu-button"
