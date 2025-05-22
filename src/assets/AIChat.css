@@ -63,6 +63,16 @@ html, body {
   margin-bottom: 40px;
 }
 
+@keyframes cyclePColorsShadow {
+  0% {box-shadow: 0 0 10px rgb(200, 118, 255);}
+  16% {box-shadow: 0 0 10px rgb(169, 40, 255);}
+  33% {box-shadow: 0 0 10px rgb(115, 10, 185);}
+  50% {box-shadow: 0 0 10px rgb(93, 40, 128);}
+  66% {box-shadow: 0 0 10px rgb(105, 29, 156);}
+  83% {box-shadow: 0 0 10px rgb(141, 84, 180);}
+  100% {box-shadow: 0 0 10px rgb(200, 118, 255);}
+}
+
 .input-text {
   margin-right: 10px;
   height: 46px;
@@ -78,7 +88,8 @@ html, body {
   user-select: none;
   outline: none;
   line-height: 36px;
-  border: none
+  border: none;
+  animation: cyclePColorsShadow 2s linear infinite;
 }
 
 .input-text:focus {
