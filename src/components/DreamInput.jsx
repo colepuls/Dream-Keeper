@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import '../assets/DreamInput.css';
-import '../assets/Navigator.css';
 import Modal from '../components/Modal';
 import { queryOllama } from '../apis/OllamaApi';
 import Navigator from '../components/Navigator';

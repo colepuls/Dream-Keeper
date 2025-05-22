@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import DreamCard from '../components/DreamCard';
 import Navigator from '../components/Navigator';
+import { queryOllama } from '../apis/OllamaApi';
+import { Search } from 'lucide-react';
 import '../assets/Home.css';
-import '../assets/Navigator.css';
 
 /**
  * Component for the Home page, where users can create a new dream and view or edit their other dreams.
@@ -10,32 +11,27 @@ import '../assets/Navigator.css';
  * @returns html for new dream button and dream cards.
  */
 export default function Home() {
-  // Initilaize dreams as empty list and and setDreams to update list and re-render.
   const [dreams, setDreams] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredDreams, setFilteredDreams] = useState([]);
 
-  // Runs once after the Home component is mounted (displayed) becasue of '[]'.
-  // Loads dreams from local storage and sets them.
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem('dreams')) || [];
     setDreams(saved);
+    setFilteredDreams(saved);
   }, []);
 
-  // Takes argument updatedDreams (new list of dreams) and sets them, then puts new list of dreams into local storage.
   const updateLocalStorage = (updatedDreams) => {
     setDreams(updatedDreams);
+    setFilteredDreams(updatedDreams);
     localStorage.setItem('dreams', JSON.stringify(updatedDreams));
   };
 
-  // Takes argument id (unique identifier for a dream) and returns every dream but the id of the one passed in,
-  // resulting in deleting the dream. Then updates to local storage.
   const handleDelete = (id) => {
     const filtered = dreams.filter((d) => d.id !== id);
     updateLocalStorage(filtered);
   };
 
-  // Takes argument id (unique identifier for a dream). Prompts user to edit title. Exits if no title is entered.
-  // Then finds the dream that was edited, makes a copy and updates the title.
-  // Then updated to local storage.
   const handleEdit = (id) => {
     const newTitle = prompt('Edit title:');
     if (!newTitle) return;
@@ -45,11 +41,54 @@ export default function Home() {
     updateLocalStorage(updated);
   };
 
+  useEffect(() => {
+    const timeout = setTimeout(async () => {
+      if (!searchQuery.trim()) {
+        setFilteredDreams(dreams);
+        return;
+      }
+
+      const systemPrompt = `
+      You're an assistant helping filter dream journal entries.
+      Given a query and a list of dreams, return only the important keywords or themes the user might be asking about.
+      Respond with a comma-separated list of single keywords only.
+
+      User query: "${searchQuery}"
+      `;
+
+      try {
+        const res = await queryOllama(systemPrompt);
+        const keywords = res.split(',').map(k => k.trim().toLowerCase()).filter(k => k);
+
+        const matches = dreams.filter(dream => {
+          const text = `${dream.title} ${dream.text} ${dream.mood}`.toLowerCase();
+          return keywords.some(k => text.includes(k));
+        });
+        setFilteredDreams(matches);
+      } catch (err) {
+        console.error('Search error:', err);
+      }
+    }, 600);
+
+    return () => clearTimeout(timeout);
+  }, [searchQuery, dreams]);
+
   return (
     <div className="page-container">
   
+      <div className="search-container">
+        <Search className="search-icon" size={26}/>
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search your dreams"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+
       <div id="dream-container">
-        {dreams.map((dream) => (
+        {filteredDreams.map((dream) => (
           <DreamCard
             key={dream.id}
             dream={dream}
@@ -57,6 +96,7 @@ export default function Home() {
             onDelete={handleDelete}
           />
         ))}
+        {filteredDreams.length === 0 && <p>No matching dreams found.</p>}
       </div>
 
       <Navigator />

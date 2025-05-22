@@ -15,7 +15,7 @@ body {
   max-height: 90vh;
   width: 100%;
   margin-top: 0px;
-  padding-top: 32px;
+  padding-top: 8px;
 
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -24,4 +24,48 @@ body {
 #dream-container::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+.search-bar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+  margin-bottom: 15px;
+  display: block;
+  width: 400px;
+  max-width: 600px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes cyclePColors {
+  0%   { stroke: rgb(200, 118, 255); }
+  16%  { stroke: rgb(169, 40, 255); }
+  33%  { stroke: rgb(115, 10, 185); }
+  50%  { stroke: rgb(93, 40, 128); }
+  66%  { stroke: rgb(105, 29, 156); }
+  83%  { stroke: rgb(141, 84, 180); }
+  100% { stroke: rgb(200, 118, 255); }
+}
+
+.search-icon {
+  margin-bottom: 42px;
+  margin-right: 15px;
+  stroke: white;
+  animation: cyclePColors 2s linear infinite;
+}
+
 

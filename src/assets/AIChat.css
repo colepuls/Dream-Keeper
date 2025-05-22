@@ -62,11 +62,12 @@ html, body {
   border-radius: 6px;
   padding-left: 10px;
   padding-top: 4px;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: #333;
   user-select: none;
   outline: none;
   line-height: 36px;
+  border: navy;
 }
 
 .input-text:focus {
@@ -95,8 +96,8 @@ html, body {
 }
 
 .user-bubble {
-  background-color:white;
-  color: black;
+  background-color: #333;
+  color: white;
   align-self: flex-end;
   margin-left: auto;
 }

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { House, BadgePlus, Search, MessageCircleQuestion } from 'lucide-react';
+import { House, BadgePlus, MessageCircleQuestion } from 'lucide-react';
+import '../assets/Navigator.css';
 
 export default function Navigator() {
   return (
@@ -15,8 +16,6 @@ export default function Navigator() {
         <Link to="/AskAI" className="help-button">
           <MessageCircleQuestion color="black" size={18}/>
         </Link>
-
-        <Search className="search-button" color="black" size={33} />
     </div>
   );
 }
