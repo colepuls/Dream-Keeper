@@ -93,7 +93,6 @@ https://github.com/user-attachments/assets/bb79bd4f-7bd6-48f1-825d-16514a103b9f
 
 ## 🚣️ Roadmap
 
-* 🔍 **Search & filter** dream titles (AI search planned)
 * ❌ **Duplicate-title guard** during save
 * ↩️ **Undo delete** snackbar
 * ☁️ **Cloud sync** with Firebase or Supabase
