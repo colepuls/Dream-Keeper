@@ -2,9 +2,20 @@
   margin-top: 20px;
 }
 
+@keyframes cyclePTextColors {
+  0%   { color: rgb(200, 118, 255); }
+  16%  { color: rgb(169, 40, 255); }
+  33%  { color: rgb(115, 10, 185); }
+  50%  { color: rgb(93, 40, 128); }
+  66%  { color: rgb(105, 29, 156); }
+  83%  { color: rgb(141, 84, 180); }
+  100% { color: rgb(200, 118, 255); }
+}
+
 .title-header {
   margin-bottom: 20px;
   text-align: center;
+  animation: cyclePTextColors 2s linear infinite;
 }
 
 .dream-content {
