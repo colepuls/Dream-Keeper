@@ -13,12 +13,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(60, 60, 60);
   border: none;
   border-radius: 8px;
   padding: 20px 16px;
   margin-bottom: 20px;
-  color: rgb(78, 78, 78);
+  color: rgb(47, 47, 47);
   font-size: 1.1em;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.742);
   word-wrap: break-word;
@@ -38,6 +38,7 @@
 .card p {
   flex: 1;
   text-align: center;
+  color: white;
 }
 
 .menu-button {

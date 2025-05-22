@@ -52,7 +52,7 @@ export default function DreamCard({ dream, onEdit, onDelete }) {
           toggleMenu(e);
         }}
       >
-        <EllipsisVertical color="rgb(78, 78, 78)" />
+        <EllipsisVertical color="black" />
       </button>
 
       {showMenu && (

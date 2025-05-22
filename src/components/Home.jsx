@@ -61,7 +61,7 @@ export default function Home() {
         const keywords = res.split(',').map(k => k.trim().toLowerCase()).filter(k => k);
 
         const matches = dreams.filter(dream => {
-          const text = `${dream.title} ${dream.text} ${dream.mood}`.toLowerCase();
+          const text = `${dream.title} ${dream.mood}`.toLowerCase();
           return keywords.some(k => text.includes(k));
         });
         setFilteredDreams(matches);

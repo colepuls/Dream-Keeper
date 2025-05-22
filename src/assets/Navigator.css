@@ -1,17 +1,18 @@
-@keyframes cycleColors {
-  0% {stroke:lightblue;}
-  20% {stroke:lightcoral;}
-  40% {stroke:lightgreen;}
-  60% {stroke:lightsalmon;}
-  80% {stroke:lightyellow;}
-  100% {stroke:lightsteelblue;}
+@keyframes cyclePColors {
+  0%   { stroke: rgb(200, 118, 255); }
+  16%  { stroke: rgb(169, 40, 255); }
+  33%  { stroke: rgb(115, 10, 185); }
+  50%  { stroke: rgb(93, 40, 128); }
+  66%  { stroke: rgb(105, 29, 156); }
+  83%  { stroke: rgb(141, 84, 180); }
+  100% { stroke: rgb(200, 118, 255); }
 }
 
 .navigator-container {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: white;
+  background-color: rgb(27, 27, 27);
   text-align: center;
   z-index: 300;
   padding-bottom: 60px;
@@ -25,14 +26,13 @@
   border-top: solid;
   border-right: solid;
   border-left: solid;
-  border-color: black;
-  border-width: 0.5px;
   height: 40px;
+  border: none;
 }
 
 .color-animate {
   stroke: white;
-  animation: cycleColors 2s linear infinite;
+  animation: cyclePColors 2s linear infinite;
 }
 
 .create-button {
@@ -64,7 +64,7 @@
   transition: background-color 0.2s;
   margin-top: 2px;
   transition: opacity 0.2s;
-  box-shadow: 0 0 6px black;
+  /*box-shadow: 0 0 6px black;*/
   cursor: pointer;
 }
 

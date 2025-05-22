@@ -1,10 +1,11 @@
-@keyframes cycleColorsShadow {
-  0% {box-shadow: 0 0 10px lightblue;}
-  20% {box-shadow: 0 0 10px lightcoral;}
-  40% {box-shadow: 0 0 10px lightgreen;}
-  60% {box-shadow: 0 0 10px lightsalmon;}
-  80% {box-shadow: 0 0 10px lightyellow;}
-  100% {box-shadow: 0 0 10px lightsteelblue;}
+@keyframes cyclePColorsShadow {
+  0% {box-shadow: 0 0 10px rgb(200, 118, 255);}
+  16% {box-shadow: 0 0 10px rgb(169, 40, 255);}
+  33% {box-shadow: 0 0 10px rgb(115, 10, 185);}
+  50% {box-shadow: 0 0 10px rgb(93, 40, 128);}
+  66% {box-shadow: 0 0 10px rgb(105, 29, 156);}
+  83% {box-shadow: 0 0 10px rgb(141, 84, 180);}
+  100% {box-shadow: 0 0 10px rgb(200, 118, 255);}
 }
 
 body {
@@ -30,15 +31,16 @@ body {
   padding-top: 10px;
   box-sizing: border-box;
   resize: none;
-  background-color: white;
+  background-color: rgb(60, 60, 60);
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.742);
+  box-shadow: 0 0 5px rgba(60, 60, 60, 0.742);
   color: rgb(27, 27, 27);
   padding-left: 8px;
   padding-right: 8px;
-  border-color: white;
+  border-color: rgb(60, 60, 60);
   border-width: 2px;
-  animation: cycleColorsShadow 2s linear infinite;
+  animation: cyclePColorsShadow 2s linear infinite;
+  color: white;
 }
 
 .textbox:focus {
