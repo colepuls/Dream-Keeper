@@ -4,7 +4,7 @@ import Navigator from '../components/Navigator';
 import '../assets/DreamView.css';
 
 export default function DreamView() {
-  const { id } = useParams(); // Get the dream ID from the URL.
+  const { id } = useParams();
   const [dream, setDream] = useState(null);
 
   useEffect(() => {

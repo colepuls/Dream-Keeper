@@ -4,19 +4,12 @@ import Modal from '../components/Modal';
 import { queryOllama } from '../apis/OllamaApi';
 import Navigator from '../components/Navigator';
 
-
-/**
- * Component for the dream input page.
- * Handles saving dreams and displaying title modal.
- * @returns html for input page and modal if dream is entered.
- */
 export default function DreamInput() {
-  const [showModal, setShowModal] = useState(false); // Initialzes title prompt Modal to not show.
-  const [currentBody, setCurrentBody] = useState(''); // Initializes dream body to empty.
-  const [title, setTitle] = useState(''); // Initializes dream title to empty.
-  const inputRef = useRef(null); // Points to input node, initializes as null.
+  const [showModal, setShowModal] = useState(false);
+  const [currentBody, setCurrentBody] = useState('');
+  const [title, setTitle] = useState('');
+  const inputRef = useRef(null);
 
-  // If dream is entered, set dream contents and initialize title to be empty, then make title Modal visible.
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -29,9 +22,8 @@ export default function DreamInput() {
   };
 
   const saveDream = async () => {
-    if (!title.trim()) return; // Keep prompting user for title.
+    if (!title.trim()) return;
 
-    // Ask AI for mood tag
     let mood = 'unknown';
     try {
       const aiPrompt = `What is the mood of the following dream? Respond with ONLY A ONE word tag like scary, sad, happy, confusing, peaceful, eye-opening. Again you should respond with only the tag, nothing else. ${currentBody}`;
@@ -42,18 +34,18 @@ export default function DreamInput() {
     }
 
     const newDream = {
-      id: Date.now(), // Unique id.
+      id: Date.now(),
       title: title.trim(),
       text: currentBody,
       mood,
     };
 
-    const existing = JSON.parse(localStorage.getItem('dreams') || '[]'); // Load previous dreams from local storage.
-    existing.push(newDream); // Add new dream to list.
-    localStorage.setItem('dreams', JSON.stringify(existing)); // Set new list back to local storage.
-    setShowModal(false); // Hide title modal.
-    setCurrentBody(''); // Empty body for a new dream.
-    inputRef.current.value = ''; // Empty textbox for a new dream.
+    const existing = JSON.parse(localStorage.getItem('dreams') || '[]');
+    existing.push(newDream);
+    localStorage.setItem('dreams', JSON.stringify(existing));
+    setShowModal(false);
+    setCurrentBody('');
+    inputRef.current.value = '';
   };
 
   return (

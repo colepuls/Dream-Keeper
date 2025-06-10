@@ -10,6 +10,6 @@ export const queryOllama = async (prompt) => {
     return response.data.response;
   } catch (error) {
     console.error('Error querying Ollama:', error);
-    return 'Errir connecting to local AI';
+    return 'Error connecting to local AI';
   }
 };
